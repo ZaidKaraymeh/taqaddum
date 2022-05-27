@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <section class="container" >
+        <div class="row mt-4" >
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/education.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:26rem">
+                        <p class="fs-4" > Educational Software for Universities & Schools  </p>
+                        <p class="card-text"> Contact us for suitable price </p>
+                        <p class="card-text"> Highly scalable educational software for universities & schools, includes a student portal module, staff portal module, admin portal module, grades, attendance taking, fee record tracking, and more!  </p>
+                        <p class="card-text"> *Note: prices may be above or below estimate depending on maintainance cost and other factors. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 1 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/profit.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:26rem">
+                        <p class="fs-4" > Informational or Small Business Website </p>
+                        <p class="card-text"> $500 and up </p>
+                        <p class="card-text"> Non-commercial wesbites, such as static pages, proof of concepts, MVPs, personal websites, and more. </p>
+                        <p class="card-text"> *Note: prices may be above or below estimate depending on maintainance cost and other factors. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 2 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/shop.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:26rem" >
+                        <p class="fs-4" > Ecommerce Website </p>
+                        <p class="card-text"> $1,000 and up </p>
+                        <p class="card-text"> commercial wesbites, such as dynamic pages, online stores </p>
+                        <p class="card-text"> *Note: prices may be above or below estimate depending on maintainance cost and other factors. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 3 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/smartphone.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:26rem">
+                        <p class="fs-4" > Mobile Application </p>
+                        <p class="card-text"> $1,500 and up </p>
+                        <p class="card-text"> commercial wesbites, such as dynamic pages, online stores </p>
+                        <p class="card-text"> *Note: prices may be above or below estimate depending on maintainance cost and other factors. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 4 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

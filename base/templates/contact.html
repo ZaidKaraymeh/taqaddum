@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<section class="container">
+
+    <form  method="POST" class="p-4">
+        {% csrf_token %}
+
+        <fieldset class="form-group" > 
+            <legend> Contact Form </legend>
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    {{ contact_form.full_name|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {{ contact_form.email|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {{ contact_form.title|as_crispy_field }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    {{ contact_form.message|as_crispy_field }}
+                </div>
+            </div>
+			{% comment %} {% if user.user_type == 'ADM' %}
+				<div class="row justify-content-start">
+					<div class="col-6">
+					</div>
+				</div>
+			{% endif %} {% endcomment %}
+				
+        </fieldset>
+        <div class="form-group py-3">
+			<button type="submit" class="btn btn-dark" > Submit </button>
+			<a 
+				class="btn btn-primary" 
+				href="{% url 'services' %}" 
+				> Back
+			</a>
+        </div>
+    </form>
+
+
+</section>
+
+{% endblock content %}
