@@ -7,15 +7,21 @@ class ContactForm(forms.ModelForm):
         model = Contact
         fields = "__all__"
         exclude = ('package', )
-
-        def __init__(self, *args, **kwargs):
-            self.fields['email'].widget.attrs['style'] = 'width:100%; height:40px;'
-            self.fields['full_name'].widget.attrs['style'] = 'width:100%; height:40px;'
-            self.fields['title'].widget.attrs['style'] = 'width:100%; height:40px;'
-            self.fields['message'].widget.attrs['style'] = 'width:100%; height:200px;'
-            self.fields['homework'].widget.attrs['style'] = 'width:100%; height:40px;'
-            self.fields['email'].widget.attrs['class'] = 'form-control'
-            self.fields['full_name'].widget.attrs['class'] = 'form-control'
-            self.fields['title'].widget.attrs['class'] = 'form-control'
-            self.fields['message'].widget.attrs['class'] = 'form-control'
-            self.fields['homework'].widget.attrs['class'] = 'form-control'
+        widgets = {
+            'email': forms.TextInput(attrs={
+                'class': 'form-control',
+                'style': "width:100%; height:40px;"
+                }),
+            'full_name': forms.TextInput(attrs={
+                'class': 'form-control',
+                'style': "width:100%; height:40px;"
+                }),
+            'title': forms.TextInput(attrs={
+                'class': 'form-control',
+                'style': "width:100%; height:40px;"
+                }),
+            'message': forms.Textarea(attrs={
+                'class': 'form-control',
+                'style': "width:100%; height:150px;"
+                }),
+        }

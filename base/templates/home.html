@@ -39,7 +39,7 @@
                         <p class="fs-4" > Educational Software for Universities & Schools  </p>
                         <p class="card-text"> Highly scalable educational software for universities & schools, includes a student portal module, staff portal module, admin portal module, grades, attendance taking, fee record tracking, and more!  </p>
                         {% comment %} <p class="card-text"> *Note: prices may be above or below estimate depending on maintainance cost and other factors. </p> {% endcomment %}
-                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 1 %}" >
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' %}" >
                             Apply Now
                         </a>
                     </div>
@@ -53,7 +53,7 @@
                     <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
                         <p class="fs-4" > Informational or Small Business Website </p>
                         <p class="card-text"> Non-commercial wesbites, such as static pages, proof of concepts, MVPs, personal websites, and more. </p>
-                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 2 %}" >
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' %}" >
                             Apply Now
                         </a>
                     </div>
@@ -67,7 +67,7 @@
                     <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem" >
                         <p class="fs-4" > Enterprise Applications </p>
                         <p class="card-text"> Enterprise software like hotel management systems, resturant chain management system, and more. </p>
-                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 3 %}" >
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' %}" >
                             Apply Now
                         </a>
                     </div>
@@ -81,7 +81,7 @@
                     <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem" >
                         <p class="fs-4" > Ecommerce Website </p>
                         <p class="card-text"> commercial wesbites, such as dynamic pages, online stores </p>
-                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 3 %}" >
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' %}" >
                             Apply Now
                         </a>
                     </div>
@@ -95,7 +95,7 @@
                     <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
                         <p class="fs-4" > Mobile Applications </p>
                         <p class="card-text"> commercial wesbites, such as dynamic pages, online stores </p>
-                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 4 %}" >
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact'  %}" >
                             Apply Now
                         </a>
                     </div>
@@ -109,7 +109,7 @@
                     <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
                         <p class="fs-4" > Other </p>
                         <p class="card-text"> If what you're looking for is not listed, contact us with the project details. </p>
-                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 4 %}" >
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' %}" >
                             Apply Now
                         </a>
                     </div>
@@ -209,58 +209,20 @@
     <section class="container-fluid text-white p-4" style="background-color: #181919">
       <div class="row">
         <div class="col-12 col-xl-5">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            auctor tristique aliquam. Fusce laoreet augue enim, a venenatis
-            libero finibus sed. Nam nulla tellus, fermentum quis orci vitae,
-            tincidunt finibus dui. Cras risus urna, maximus vitae sem eget,
-            luctus ornare ligula. Vestibulum tempus at sem id sodales.
-            Suspendisse potenti. In mollis nisi quis nibh pretium, at volutpat
-            sem sagittis. Aenean nisi dui, malesuada molestie scelerisque a,
-            vestibulum eget tortor. Quisque pulvinar semper ornare. Curabitur id
-            nibh rutrum, tempus quam nec, gravida ligula. Suspendisse faucibus
-            est vel lacus ullamcorper sollicitudin. Mauris risus risus,
-            malesuada vitae tempus sit amet, volutpat nec enim. Nunc hendrerit
-            vel ante eu fringilla. Donec quam ex, porttitor blandit pellentesque
-            a, consequat at lacus. Nulla molestie libero et posuere tincidunt.
-            Fusce porta elit neque, vitae aliquet lacus posuere sed.
+          <p class="text-center" >
+            &copy Taqaddum
           </p>
         </div>
         <div class="col-12 col-xl-7">
-          <form>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-            </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-              />
-            </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          <div class=" text-white d-flex gap-5 text-center justify-content-center">
+
+            <a href="{% url 'contact' %}" class=" text-decoration-none bg-transparent text-white text-center">
+              Contact Us
+            </a>
+            <a href="{% url 'about' %}" class=" text-decoration-none bg-transparent text-white text-center">
+              About
+            </a>
+          </div>
         </div>
       </div>
     </section>

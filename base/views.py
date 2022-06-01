@@ -8,25 +8,26 @@ from .forms import *
 def home(request):
     return render(request, "home.html")
 
-def services(request):
-    return render(request, "services.html")
+def about(request):
+    return render(request, "about.html")
 
 
 packages = {
     "1": "Educational Software for Universities & Schools",
     "2": "Informational or Small Business Website",
     "3": "Ecommerce Website",
-    "4": "Mobile Application"
+    "4": "Mobile Application",
+    "5":"Enterprise Application",
+    "6": "other"
 }
 
-def contact(request, package_id):
+def contact(request):
     if request.method == "POST":
         contact_form = ContactForm(request.POST)
 
         if contact_form.is_valid():
             obj = contact_form.save(commit=False)
-            obj.package = packages[f"{package_id}"]
-            print(obj)
+            # obj.package = packages[f"{package_id}"]
             obj.save()
             messages.success(request, f"Message Sent Successfully! We will contact you shortly.")
             return redirect("home")
