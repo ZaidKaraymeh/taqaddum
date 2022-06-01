@@ -8,3 +8,4 @@ class Contact(models.Model):
     title = models.CharField( max_length=254)
     message = models.TextField(max_length=9000)
     package = models.CharField(max_length=254, null=True)
+    date_created = models.DateTimeField( auto_now_add=True)
