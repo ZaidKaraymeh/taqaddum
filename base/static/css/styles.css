@@ -7,6 +7,11 @@
     border-radius: 12px;
 }
 
+.header {
+  margin-top: 50px;
+  margin-bot: 50px;
+}
+
 .responsive-img {
     max-width: 100%;
     height: auto;
@@ -39,7 +44,9 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border: 2px solid #353535;
     transition: box-shadow 0.4s ease-in-out;
-    transition: border 0.3s ease-in-out;
+    transition: border 0.1s ease-in-out;
+    transform: translateY(-4px);
+    transition: transform 0.2s ease-in-out;
   }
   
 .card-hover:hover .bg-img {
@@ -60,5 +67,47 @@
 
 .navbar-shadow {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
 
+.divider {
+  height:100px;
+  margin-bottom: 50px;
+}
+
+
+.header-text {
+  font-size: 102px;
+}
+
+@media only screen and (max-width: 1140px) {
+  
+  .header-text {
+    font-size: 64px;
+  }
+
+}
+@media only screen and (max-width: 768px) {
+  
+  .header-text {
+    font-size: 48px;
+  }
+  
+  .card-hover {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #353535;
+  }
+  .card-hover .bg-img {
+    background-color: #c7dfe0;
+  }
+  
+  .card-hover .bg-hover {
+    background-color: white !important;
+    
+  }
+
+  .divider {
+    height: 25px;
+  }
+  
 }

@@ -4,29 +4,120 @@
     <section class="container">
       <div class="row w-100">
         <div
-          class="col d-flex justify-content-center align-items-center w-100"
-          style="height: 75vh"
+          class="col d-flex justify-content-center align-items-center w-100 header"
+          
         >
           <div>
             <p class="gradient-text">CUTTING EDGE TECHNOLOGY</p>
-            <h1 class="gradient-text" style="font-size: 7.5vw">
+            <h1 class="gradient-text header-text ">
               Software & Cloud <br />
               Solutions for <br />the Future
             </h1>
             <div style="min-height: 25px"></div>
             <div>
-              <button type="button" class="btn btn-primary text-center p-3">
+              <a href="#services" type="button" class="btn btn-dark text-center p-3">
                 Need a Service?
-              </button>
-              <button type="button" class="btn btn-dark text-center p-3">
+              </a>
+              {% comment %} <button type="button" class="btn btn-dark text-center p-3">
                 Learn More
-              </button>
+              </button> {% endcomment %}
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div style="height: 50px"></div>
+    <section class="container" id="services" >
+      <div class="divider border-bottom" > </div>
+      <h2 class="fw-bold text-center" >What Taqaddum can do </h2>
+        <div class="row mt-4" >
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/education.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
+                        <p class="fs-4" > Educational Software for Universities & Schools  </p>
+                        <p class="card-text"> Highly scalable educational software for universities & schools, includes a student portal module, staff portal module, admin portal module, grades, attendance taking, fee record tracking, and more!  </p>
+                        {% comment %} <p class="card-text"> *Note: prices may be above or below estimate depending on maintainance cost and other factors. </p> {% endcomment %}
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 1 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/profit.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
+                        <p class="fs-4" > Informational or Small Business Website </p>
+                        <p class="card-text"> Non-commercial wesbites, such as static pages, proof of concepts, MVPs, personal websites, and more. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 2 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/enterprise.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem" >
+                        <p class="fs-4" > Enterprise Applications </p>
+                        <p class="card-text"> Enterprise software like hotel management systems, resturant chain management system, and more. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 3 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/shop.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem" >
+                        <p class="fs-4" > Ecommerce Website </p>
+                        <p class="card-text"> commercial wesbites, such as dynamic pages, online stores </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 3 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/smartphone.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
+                        <p class="fs-4" > Mobile Applications </p>
+                        <p class="card-text"> commercial wesbites, such as dynamic pages, online stores </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 4 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  col-md-6 col-xl-4 my-2">
+                <div class="card card-hover" style="" >
+                    <div class="d-flex justify-content-center p-3 border-bottom bg-img m-0 p-0" >
+                        <img src="{% static 'images/other.png' %}" class=" card-img-top img-h " alt="...">
+                    </div>
+                    <div class="card-body bg-light bg-hover p-4 d-flex flex-column" style="height:20rem">
+                        <p class="fs-4" > Other </p>
+                        <p class="card-text"> If what you're looking for is not listed, contact us with the project details. </p>
+                        <a class="btn btn-dark btn-pos d-block " href="{% url 'contact' 4 %}" >
+                            Apply Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% comment %} <div style="height: 50px"></div>
     <section class="container p-4">
       <div class="row">
         <div class="col-12 col-xl-5">
@@ -53,8 +144,8 @@
           <img src="{% static 'images/laptop2.jpg' %}" class="br responsive-img" />
         </div>
       </div>
-    </section>
-    <div style="height: 70px"></div>
+    </section> {% endcomment %}
+    {% comment %} <div style="height: 70px"></div>
     <section class="container p-4">
       <div class="row d-flex flex-row flex-md-row-reverse">
         <div class="col-12 col-xl-5">
@@ -113,7 +204,7 @@
           <img src="{% static 'images/laptop2.jpg' %}" class="br responsive-img" />
         </div>
       </div>
-    </section>
+    </section> {% endcomment %}
     <div style="height: 50px"></div>
     <section class="container-fluid text-white p-4" style="background-color: #181919">
       <div class="row">
