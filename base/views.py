@@ -1,3 +1,4 @@
+from logging.handlers import RotatingFileHandler
 from django.shortcuts import redirect, render
 from django.contrib import messages
 
@@ -40,3 +41,44 @@ def contact(request):
     }
 
     return render(request, "contact.html", context)
+
+def add_blog(request):
+    user = User.objects.get(id=request.user.id)
+    if request.method == "POST":
+        blog_form = BlogForm(request.POST)
+
+        if blog_form.is_valid():
+            obj = blog_form.save(commit=False)
+            obj.author = user
+            # obj.package = packages[f"{package_id}"]
+            obj.save()
+            messages.success(request, f"Blog Posted Successfully")
+            return redirect("home")
+            
+    else:
+        blog_form = BlogForm()
+
+    context = {
+        "blog_form": blog_form
+    }
+
+    return render(request, "add_blog.html", context)
+
+
+def blog(request):
+    blogs = Blog.objects.all().order_by("-date_created")
+
+    context = {
+        "blogs":blogs
+    }
+
+    return render(request, "blogs.html", context)
+
+def view_blog(request, id):
+    blog = Blog.objects.get(id=id)
+
+    context = {
+        "blog":blog
+    }
+
+    return render(request, "view_blog.html", context)

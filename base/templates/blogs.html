@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="container">
+
+    <div class="row mt-5">
+        {% for blog in blogs %}
+            <div class="col-4">
+                <div class="card border-0" style="height: 12rem;">
+                    <div class="card-body">
+                        <a href="{% url 'view_blog' blog.id %}" class="text-decoration-none text-dark " >
+                            <h5 class="card-title fw-bold text-dark">{{blog.title}}</h5>
+                        </a>
+                        <p class="card-text">{{blog.date_created}}</p>
+                        <p class="card-text">By {{blog.author}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+</seciton>
+
+{% endblock content %}

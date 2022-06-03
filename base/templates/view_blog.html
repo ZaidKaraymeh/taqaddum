@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="container">
+
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="card border-0" style="height: 12rem;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">{{blog.title}}</h5>
+                    <p class="card-text">{{blog.date_created}}</p>
+                    <p class="card-text">{{blog.content|safe}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</seciton>
+
+{% endblock content %}

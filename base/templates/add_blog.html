@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="container">
+    <div class="row"> 
+        <form method="POST">
+            {% csrf_token %}
+            {{ blog_form.media }}
+            {{ blog_form.as_p }}
+            <input type="submit"/>
+        </form>
+    </div>
+</section>
+
+{% endblock content %}

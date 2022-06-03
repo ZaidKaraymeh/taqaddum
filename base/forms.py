@@ -25,3 +25,14 @@ class ContactForm(forms.ModelForm):
                 'style': "width:100%; height:150px;"
                 }),
         }
+class BlogForm(forms.ModelForm):
+    class Meta:
+        model = Blog
+        fields = "__all__"
+        exclude = ('date_created', 'date_updated', 'author' )
+        widgets = {
+            'title': forms.TextInput(attrs={
+                'class': 'form-control',
+                'style': "width:100%; height:40px;"
+                }),
+        }
