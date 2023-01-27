@@ -199,13 +199,13 @@ STATIC_ROOT  =   os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-import psycopg2
+# import psycopg2
 
 if os.getcwd() == '/app':
 
     DATABASE_URL = os.environ['DATABASE_URL']
 
-    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    # conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
     import dj_database_url
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
