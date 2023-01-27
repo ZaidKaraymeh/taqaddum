@@ -213,6 +213,6 @@ if os.getcwd() == '/app':
     SECURE_SSL_REDIRECT = True
     DEBUG = False
 
-import django_heroku
+# import django_heroku
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
