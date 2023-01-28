@@ -33,7 +33,7 @@ ALLOWED_HOSTS = [
     "www.taqaddumbh.com", "taqaddumbh.com", 
     "https://www.taqaddumbh.com/", "http://www.taqaddumbh.com/", "https://www.taqaddumbh.com",
     "taqaddumbh.com", "https://taqaddumbh.com/", "http://taqaddumbh.com/",
-    "https://web-production-f026.up.railway.app/"]
+    "https://web-production-f026.up.railway.app/", "web-production-f026.up.railway.app"]
 
 
 # Application definition
@@ -219,7 +219,7 @@ if os.getcwd() == '/app':
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
-    DEBUG = True
+    DEBUG = False
 
 # import django_heroku
 
