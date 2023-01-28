@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+f$3)5k5r90dnz2yo^jjrv4zuj@48o37=2+6g3zbt*sg*c&5n8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "taqaddum.herokuapp.com", 
@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     "http://127.0.0.1:8000/", 
     "127.0.0.1:8000", "127.0.0.1", 
     "www.taqaddumbh.com", "taqaddumbh.com", 
-    "https://www.taqaddumbh.com/", "http://www.taqaddumbh.com/", 
+    "https://www.taqaddumbh.com/", "http://www.taqaddumbh.com/", "https://www.taqaddumbh.com",
     "taqaddumbh.com", "https://taqaddumbh.com/", "http://taqaddumbh.com/",
     "https://web-production-f026.up.railway.app/"]
 
