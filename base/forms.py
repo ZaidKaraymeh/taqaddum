@@ -10,19 +10,23 @@ class ContactForm(forms.ModelForm):
         widgets = {
             'email': forms.TextInput(attrs={
                 'class': 'form-control',
-                'style': "width:100%; height:40px;"
+                'style': "width:100%; height:40px;",
+                'placeholder': "Email"
                 }),
             'full_name': forms.TextInput(attrs={
                 'class': 'form-control',
-                'style': "width:100%; height:40px;"
+                'style': "width:100%; height:40px;",
+                'placeholder': "Full Name"
                 }),
             'title': forms.TextInput(attrs={
                 'class': 'form-control',
-                'style': "width:100%; height:40px;"
+                'style': "width:100%; height:40px;",
+                'placeholder': "Title of Your Business Enquiry"
                 }),
             'message': forms.Textarea(attrs={
                 'class': 'form-control',
-                'style': "width:100%; height:150px;"
+                'style': "width:100%; height:150px;",
+                'placeholder': "Message"
                 }),
         }
 class BlogForm(forms.ModelForm):
