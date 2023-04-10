@@ -220,7 +220,7 @@ if os.getcwd() == '/app':
     # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # SECURE_SSL_REDIRECT = True
     DEBUG = False
-
+    CSRF_TRUSTED_ORIGINS = ['https://web-production-f026.up.railway.app', 'https://www.taqaddumbh.com']
 # import django_heroku
 
 # django_heroku.settings(locals())
