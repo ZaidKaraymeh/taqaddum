@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+f$3)5k5r90dnz2yo^jjrv4zuj@48o37=2+6g3zbt*sg*c&5n8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "taqaddum.herokuapp.com", 
@@ -219,8 +219,8 @@ if os.getcwd() == '/app':
     DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
     # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # SECURE_SSL_REDIRECT = True
-    DEBUG = False
-    CSRF_TRUSTED_ORIGINS = ['https://web-production-f026.up.railway.app', 'https://www.taqaddumbh.com']
+    DEBUG = True
+    CSRF_TRUSTED_ORIGINS = ['https://web-production-f026.up.railway.app', 'https://www.taqaddumbh.com', "www.taqaddumbh.com", "taqaddumbh.com", "web-production-f026.up.railway.app"]
 # import django_heroku
 
 # django_heroku.settings(locals())
