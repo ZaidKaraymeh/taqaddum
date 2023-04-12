@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -207,9 +208,13 @@ STATIC_ROOT  =   os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-# import psycopg2
+DATABASE_URL = "postgresql://postgres:ulhpeFfTyybFlfo12u7s@containers-us-west-189.railway.app:5643/railway"
 
-    # conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+db_config = dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
+db_config['ENGINE'] = 'django.db.backends.postgresql'
+DATABASES = {
+    'default': db_config,
+       }
 
 if os.getcwd() == '/app':
 
@@ -220,11 +225,12 @@ if os.getcwd() == '/app':
     db_config['ENGINE'] = 'django.db.backends.postgresql'
     DATABASES = {
         'default': db_config,
-}
+    }
     # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # SECURE_SSL_REDIRECT = True
     DEBUG = False
-    CSRF_TRUSTED_ORIGINS = ['https://web-production-f026.up.railway.app', 'https://www.taqaddumbh.com', "www.taqaddumbh.com", "taqaddumbh.com", "web-production-f026.up.railway.app"]
+    CSRF_TRUSTED_ORIGINS = ['https://web-production-f026.up.railway.app', 'https://www.taqaddumbh.com',
+                            "www.taqaddumbh.com", "taqaddumbh.com", "web-production-f026.up.railway.app", 'https://taqaddumbh.com']
 # import django_heroku
 
 # django_heroku.settings(locals())
