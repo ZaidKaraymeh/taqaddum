@@ -209,17 +209,21 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # import psycopg2
 
+    # conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+
 if os.getcwd() == '/app':
 
     DATABASE_URL = os.environ['DATABASE_URL']
 
-    # conn = psycopg2.connect(DATABASE_URL, sslmode='require')
-
     import dj_database_url
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+    db_config = dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
+    db_config['ENGINE'] = 'django.db.backends.postgresql'
+    DATABASES = {
+        'default': db_config,
+}
     # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     # SECURE_SSL_REDIRECT = True
-    DEBUG = True
+    DEBUG = False
     CSRF_TRUSTED_ORIGINS = ['https://web-production-f026.up.railway.app', 'https://www.taqaddumbh.com', "www.taqaddumbh.com", "taqaddumbh.com", "web-production-f026.up.railway.app"]
 # import django_heroku
 
