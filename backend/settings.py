@@ -208,13 +208,7 @@ STATIC_ROOT  =   os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-DATABASE_URL = "postgresql://postgres:ulhpeFfTyybFlfo12u7s@containers-us-west-189.railway.app:5643/railway"
 
-db_config = dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
-db_config['ENGINE'] = 'django.db.backends.postgresql'
-DATABASES = {
-    'default': db_config,
-       }
 
 if os.getcwd() == '/app':
 
